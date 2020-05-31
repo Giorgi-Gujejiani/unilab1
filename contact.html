@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>დავალება 2</title>
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/fonts.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles/contact.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="./images/htmlTag.png">
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="main.html">მთავარი</a></li>
+                    <li><a href="index.html">სიახლეები</a></li>
+                    <li><a id="active" href="contact.html">კონტაქტი</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="contact">
+            <div class="contact-text">
+                <h3>საკონტაქტო ინფორმაცია:</h3>
+                <p><span class="pre">მისამართი:</span>პეტრიაშვილის ქ. 30</p>
+                <p><span class="pre">ტელ.:</span>+995 32 222 222</p>
+                <p><span class="pre">ელ. ფოსტა:</span>mail@gmail.com</p>
+            </div>
+            <div class="map" id="map">
+            </div>
+        </section>
+        <footer>
+            <ul class="footer-menu">
+                <li id="first"><a target="_blank" href="https://www.facebook.com/"><img src="./images/Path 8.png"></a></li>
+                <li><a target="_blank" href="https://www.youtube.com/"><img src="images/Youtube.png"></a></li>
+            </ul>
+        </footer>
+        
+        
+        <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                var Tbilisi = {lat: 41.722042, lng: 44.810404};
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 14, center: Tbilisi});
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: Tbilisi, map: map});
+            }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBG3rPhKbIQ2yK0iJzOTQ6j8JJCIdR44M&callback=initMap">
+        </script>
+    </body>
+</html>
